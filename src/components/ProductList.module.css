@@ -1,0 +1,11 @@
+.container{
+    display: grid;
+    /*Crea columnas que se adapatan al ancho disponible*/
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(min(100%, 250px), 1fr));
+    /*Espacio entre tarjetas*/
+    gap: 24px;
+    /*espacio interno*/
+    padding: 30px
+}
