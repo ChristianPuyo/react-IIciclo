@@ -21,18 +21,25 @@ function ProductList(){
     )
 
     return(
-        <div className={styles.container}>
+        <div>
             <SearchBar 
                search={search}
                setSearch={setSearch}
             />
+            <p>
+                {filteredProducts.length} products found
+            </p>
+            <div className={styles.container}>
+           
             {filteredProducts.map(product =>(
                 <ProductCard 
                     key ={product.id}
                     product={product}
                 />
             ))}
+            </div>
         </div>
+        
     )
 }
 export default ProductList;
