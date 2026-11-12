@@ -52,9 +52,40 @@ function Login({setIsAuthenticated}) {
                         required
                     />
                 </div>
+                {/*Campo de contraseña*/}
+                <div>
+                    <label htmlFor="password">
+                        Password
+                    </label>
+
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="Enter your password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                {/*Mensaje de error*/}
+                {error && (
+                    <p className={styles.error}>
+                        {error}
+                    </p>
+                )}
+                {/*Botón para iniciar sesión*/}
+                <button 
+                  type="submit" 
+                  className={styles.button}
+                >
+                    Sign In
+                </button>
+
             </form>
 
         </div>
 
     )
 }
+
+export default Login;
